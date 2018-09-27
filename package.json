@@ -4,11 +4,7 @@
   "description": "Slack clone",
   "main": "index.js",
   "scripts": {
-<<<<<<< HEAD
     "start": "nodemon --exec babel-node index.js"
-=======
-    "test": "echo \"Error: no test specified\" && exit 1"
->>>>>>> Add dev dependencies
   },
   "repository": {
     "type": "git",
@@ -25,7 +21,6 @@
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.7.0",
     "babel-preset-stage-3": "^6.24.1",
-<<<<<<< HEAD
     "eslint": "^5.6.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-config-airbnb-base": "^13.1.0",
@@ -40,8 +35,5 @@
     "express": "^4.16.3",
     "graphql": "^14.0.2",
     "graphql-tools": "^4.0.0"
-=======
-    "nodemon": "^1.18.4"
->>>>>>> Add dev dependencies
   }
 }
