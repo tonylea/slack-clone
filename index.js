@@ -6,7 +6,7 @@ import { makeExecutableSchema } from 'graphql-tools';
 import typeDefs from './schema';
 import resolvers from './resolvers';
 
-require('dotenv').config();
+import models from './models';
 
 const schema = makeExecutableSchema({
   typeDefs,
@@ -20,5 +20,8 @@ const graphiqlEndpoint = '/graphiql';
 const app = express();
 app.use(graphqlEndpoint, bodyParser.json(), graphqlExpress({ schema }));
 app.use(graphiqlEndpoint, graphiqlExpress({ endpointURL: graphqlEndpoint }));
-app.listen(PORT);
-console.log(`Listening on port ${PORT}`);
+
+models.sequelize.sync(/* { force: true } */).then(() => {
+  app.listen(PORT);
+  console.log(`Listening on port ${PORT}`);
+});
