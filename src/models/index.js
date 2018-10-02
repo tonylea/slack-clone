@@ -8,7 +8,10 @@ const sequelize = new Sequelize(
   process.env.DBPASSWORD,
   {
     host: process.env.DBINSTANCE,
-    dialect: process.env.DBDIALECT
+    dialect: process.env.DBDIALECT,
+    define: {
+      underscored: true
+    }
   }
 );
 
