@@ -23,5 +23,5 @@ app.use(graphiqlEndpoint, graphiqlExpress({ endpointURL: graphqlEndpoint }));
 
 models.sequelize.sync(/* { force: true } */).then(() => {
   app.listen(PORT);
-  console.log(`Listening on port ${PORT}`);
+  console.log(`Listening on port ${PORT}`); // eslint-disable-line no-console
 });
