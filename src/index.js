@@ -10,7 +10,7 @@ import models from './models';
 
 const schema = makeExecutableSchema({
   typeDefs,
-  resolvers,
+  resolvers
 });
 
 const PORT = 3000;
