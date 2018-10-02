@@ -2,21 +2,25 @@ export default (sequelize, DataTypes) => {
   const User = sequelize.define('user', {
     username: {
       type: DataTypes.STRING,
-      unique: true,
+      unique: true
     },
     email: {
       type: DataTypes.STRING,
-      unique: true,
+      unique: true
     },
     password: {
-      type: DataTypes.STRING,
-    },
+      type: DataTypes.STRING
+    }
   });
 
-  User.associate = (models) => {
+  User.associate = models => {
     User.belongsToMany(models.Team, {
       through: 'member',
-      foreignKay: 'userId',
+      foreignKey: 'userId'
+    });
+    User.belongsToMany(models.Channel, {
+      through: 'channelMember',
+      foreignKey: 'userId'
     });
   };
 
