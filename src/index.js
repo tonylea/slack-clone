@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 import express from 'express';
 import bodyParser from 'body-parser';
 import { graphqlExpress, graphiqlExpress } from 'apollo-server-express';
@@ -16,9 +18,9 @@ const schema = makeExecutableSchema({
   resolvers
 });
 
-const PORT = 3000;
-const graphqlEndpoint = '/graphql';
-const graphiqlEndpoint = '/graphiql';
+const PORT = process.env.PORT;
+const graphqlEndpoint = process.env.GRAPHQL_ENDPOINT;
+const graphiqlEndpoint = process.env.GRAPHIQL_ENDPOINT;
 
 const app = express();
 app.use(
