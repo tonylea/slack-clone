@@ -20,8 +20,8 @@ const schema = makeExecutableSchema({
 });
 
 const port = process.env.PORT;
-const graphqlEndpoint = process.env.GRAPHQL_ENDPOINT;
-const graphiqlEndpoint = process.env.GRAPHIQL_ENDPOINT;
+const graphqlEndpoint = `/${process.env.GRAPHQL_ENDPOINT}`;
+const graphiqlEndpoint = `/${process.env.GRAPHIQL_ENDPOINT}`;
 
 const app = express();
 app.use(cors('*'));

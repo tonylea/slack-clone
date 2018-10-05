@@ -1,18 +1,4 @@
 {
   "private": true,
-  "workspaces": ["packages/*"],
-  "devDependencies": {
-    "eslint": "^5.6.1",
-    "eslint-config-airbnb": "^17.1.0",
-    "eslint-config-airbnb-base": "^13.1.0",
-    "eslint-config-prettier": "^3.1.0",
-    "eslint-plugin-import": "^2.14.0",
-    "eslint-plugin-jsx-a11y": "^6.1.1",
-    "eslint-plugin-prettier": "^3.0.0",
-    "eslint-plugin-react": "^7.11.1",
-    "prettier": "^1.14.3",
-    "husky": "^0.14.3",
-    "jest-enzyme": "^6.0.2",
-    "lint-staged": "^7.2.0"
-  }
+  "workspaces": ["packages/*"]
 }
