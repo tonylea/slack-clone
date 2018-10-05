@@ -42,5 +42,5 @@ app.use(graphiqlEndpoint, graphiqlExpress({ endpointURL: graphqlEndpoint }));
 
 models.sequelize.sync(/* { force: true } */).then(() => {
   app.listen(port);
-  console.log(`Listening on port ${port}`); // eslint-disable-line no-console
+  console.log(`Go to http://localhost:${port}/graphiql to run queries!`); // eslint-disable-line no-console
 });
